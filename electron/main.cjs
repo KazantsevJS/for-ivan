@@ -21,7 +21,16 @@ function createWindow() {
 		backgroundColor: '#1e1e1e',
 		show: false,
 		opacity: currentOpacity,
+		titleBarOverlay: {
+			color: '#2d3748',
+			symbolColor: '#ffffff',
+			height: 60,
+		},
 	})
+
+	if (process.platform === 'darwin') {
+		mainWindow.setWindowButtonVisibility(false)
+	}
 
 	if (isDev) {
 		mainWindow.loadURL('http://localhost:3000')

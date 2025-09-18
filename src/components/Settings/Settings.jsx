@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import styles from './Settings.module.css'
 
-const Settings = ({ onClose, theme, toggleTheme }) => {
+const Settings = ({ onClose }) => {
 	const modalRef = useRef(null)
 	const [opacity, setOpacity] = useState(100)
 
@@ -79,22 +79,6 @@ const Settings = ({ onClose, theme, toggleTheme }) => {
 						/>
 					</div>
 
-					<div className={styles.modal__group}>
-						<label className={styles.modal__label}>
-							Тема:{' '}
-							<span className={styles.modal__value}>
-								{theme === 'dark' ? 'Тёмная' : 'Светлая'}
-							</span>
-						</label>
-						<label className={styles.theme__switch}>
-							<input
-								type='checkbox'
-								checked={theme === 'dark'}
-								onChange={toggleTheme}
-							/>
-							<span className={styles.slider}></span>
-						</label>
-					</div>
 				</div>
 			</div>
 		</div>

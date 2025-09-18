@@ -20,9 +20,8 @@
 
 .sidebar__btn {
 	padding: 20px 25px;
-	background-color:#2d3748;
+	background-color: #2d3748;
 	border: none;
-	color: rgb(159, 160, 160);
 	cursor: pointer;
 	transition: all 0.2s ease;
 	font-size: 18px;
@@ -30,18 +29,18 @@
 }
 
 [data-theme='light'] .sidebar__btn {
-	background-color:#6fabb7
+	background-color: #6fabb7;
 }
 
 .sidebar__btn:hover {
 	background-color: #3182ce;
 }
 
-.sidebar__btn_active {
-	background-color: #3182ce;
-}
-
 .sidebar__text {
 	opacity: 0.9;
+	color: white;
+}
+
+[data-theme='light'] .sidebar__text {
 	color: white;
 }

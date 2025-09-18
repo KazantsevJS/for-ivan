@@ -1,6 +1,6 @@
 import styles from './Header.module.css'
 
-const Header = () => {
+const Header = ({ theme, toggleTheme }) => {
 	const handleMinimize = () => {
 		if (window.electronAPI) {
 			window.electronAPI.minimizeWindow()
@@ -22,6 +22,14 @@ const Header = () => {
 	return (
 		<header className={styles.header}>
 			<div className={styles.header__left}>
+				<label className={styles.theme__switch}>
+					<input
+						type='checkbox'
+						checked={theme === 'dark'}
+						onChange={toggleTheme}
+					/>
+					<span className={styles.slider}></span>
+				</label>
 			</div>
 
 			<div className={styles.header__container}>
@@ -30,7 +38,14 @@ const Header = () => {
 					aria-label='Minimize'
 					onClick={handleMinimize}
 				>
-					<span className={styles.icon__btn}>−</span>
+					<svg
+						className={styles.icon}
+						width='12'
+						height='12'
+						viewBox='0 0 12 12'
+					>
+						<rect x='2' y='5' width='8' height='2' fill='currentColor' />
+					</svg>
 				</button>
 
 				<button
@@ -38,7 +53,22 @@ const Header = () => {
 					aria-label='Maximize'
 					onClick={handleMaximize}
 				>
-					<span className={styles.icon__btn}>□</span>
+					<svg
+						className={styles.icon}
+						width='12'
+						height='12'
+						viewBox='0 0 12 12'
+					>
+						<rect
+							x='2'
+							y='2'
+							width='8'
+							height='8'
+							fill='none'
+							stroke='currentColor'
+							strokeWidth='1'
+						/>
+					</svg>
 				</button>
 
 				<button
@@ -46,7 +76,29 @@ const Header = () => {
 					aria-label='Close'
 					onClick={handleClose}
 				>
-					<span className={styles.icon__btn}>×</span>
+					<svg
+						className={styles.icon}
+						width='12'
+						height='12'
+						viewBox='0 0 12 12'
+					>
+						<line
+							x1='2'
+							y1='2'
+							x2='10'
+							y2='10'
+							stroke='currentColor'
+							strokeWidth='1.2'
+						/>
+						<line
+							x1='10'
+							y1='2'
+							x2='2'
+							y2='10'
+							stroke='currentColor'
+							strokeWidth='1.2'
+						/>
+					</svg>
 				</button>
 			</div>
 		</header>

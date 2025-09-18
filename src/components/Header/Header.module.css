@@ -11,7 +11,7 @@
 .header__left {
 	display: flex;
 	align-items: center;
-	padding-left: 12px;
+	padding-left: 25px;
 	-webkit-app-region: no-drag;
 }
 
@@ -64,16 +64,8 @@
 	background-color: #2d3748;
 }
 
-[data-theme='dark'] .control__btn {
-	color: white;
-}
-
 [data-theme='light'] .header {
 	background-color: #6fabb7;
-}
-
-[data-theme='light'] .control__btn {
-	color: #2d3748;
 }
 
 input:checked + .slider:before {
@@ -107,11 +99,17 @@ input:checked + .slider:before {
 	background-color: #e53e3e;
 }
 
-.icon__btn {
-	font-size: 19px;
+.icon {
+	width: 12px;
+	height: 12px;
 	opacity: 0.8;
+	transition: opacity 0.2s ease;
 }
 
-.control__btn:hover .icon__btn {
+.control__btn:hover .icon {
 	opacity: 1;
+}
+
+[data-theme='light'] .control__btn {
+	color: #2d3748;
 }

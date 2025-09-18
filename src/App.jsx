@@ -19,19 +19,13 @@ function App() {
 
 	return (
 		<div className='app' data-theme={theme}>
-			<Header />
+			<Header theme={theme} toggleTheme={toggleTheme} />
 			<div className='app__body'>
 				<Sidebar onSettingsClick={openSettings} />
 				<div className='main-content'></div>
 			</div>
 
-			{isSettingsOpen && (
-				<Settings
-					onClose={closeSettings}
-					theme={theme}
-					toggleTheme={toggleTheme}
-				/>
-			)}
+			{isSettingsOpen && <Settings onClose={closeSettings} />}
 		</div>
 	)
 }
