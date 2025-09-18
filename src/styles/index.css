@@ -1,0 +1,99 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+		sans-serif;
+	overflow: hidden;
+	background-color: #1a202c;
+	color: #e2e8f0;
+}
+
+#root {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.app__body {
+	display: flex;
+	flex: 1;
+	overflow: hidden;
+}
+
+.main-content {
+	flex: 1;
+	background-color: #1a202c;
+}
+
+[data-theme='light'] body {
+	background-color: #f7fafc;
+	color: #2d3748;
+}
+
+[data-theme='light'] .main-content {
+	background-color: #f7fafc;
+}
+
+[data-theme='light'] .sidebar {
+	background-color: #ffffff;
+	border-right: 1px solid #e2e8f0;
+}
+
+[data-theme='light'] .sidebar__btn {
+	color: #4a5568;
+}
+
+[data-theme='light'] .sidebar__btn:hover {
+	background-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='light'] .sidebar__btn_active {
+	background-color: #3182ce;
+	color: white;
+}
+
+[data-theme='light'] .settingsModal {
+	background-color: #ffffff;
+}
+
+[data-theme='light'] .settingsModal__header {
+	border-bottom: 1px solid #e2e8f0;
+}
+
+[data-theme='light'] .settingsModal__close {
+	color: #4a5568;
+}
+
+[data-theme='light'] .settingsModal__title {
+	color: #2d3748;
+}
+
+[data-theme='light'] .settingsModal__label {
+	color: #4a5568;
+}
+
+[data-theme='light'] .settingsModal__value {
+	color: #718096;
+}
+
+[data-theme='light'] .settingsModal__input {
+	background-color: #ffffff;
+	border: 1px solid #cbd5e0;
+	color: #2d3748;
+}
+
+[data-theme='light'] .settingsModal__input:focus {
+	border-color: #3182ce;
+}
+
+[data-theme='light'] .settingsModal__slider {
+	background: #e2e8f0;
+}
+
+[data-theme='light'] .settingsModal__slider:hover {
+	background: #e2e8f0;
+}

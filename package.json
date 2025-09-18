@@ -1,0 +1,48 @@
+{
+	"name": "for-ivan",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"main": "electron/main.cjs",
+	"homepage": "./",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"electron": "electron .",
+		"electron-dev": "concurrently \"npm run dev\" \"wait-on http://localhost:3000 && NODE_ENV=development electron .\"",
+		"electron-pack": "electron-builder",
+		"build-electron": "npm run build && npm run electron-pack"
+	},
+	"dependencies": {
+		"react": "^19.1.1",
+		"react-dom": "^19.1.1"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.35.0",
+		"@types/react": "^19.1.13",
+		"@types/react-dom": "^19.1.9",
+		"@vitejs/plugin-react": "^5.0.2",
+		"concurrently": "^9.2.1",
+		"electron": "^38.1.2",
+		"electron-builder": "^26.0.12",
+		"eslint": "^9.35.0",
+		"eslint-plugin-react-hooks": "^5.2.0",
+		"eslint-plugin-react-refresh": "^0.4.20",
+		"globals": "^16.4.0",
+		"vite": "^7.1.6",
+		"wait-on": "^9.0.0"
+	},
+	"build": {
+		"appId": "com.yourcompany.window-manager",
+		"productName": "Window Manager",
+		"directories": {
+			"output": "dist-electron"
+		},
+		"files": [
+			"dist-react/**/*",
+			"electron/**/*",
+			"node_modules/**/*"
+		]
+	}
+}
